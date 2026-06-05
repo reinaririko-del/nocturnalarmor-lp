@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -26,10 +26,10 @@
         @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
 
         :root {
-            --bg-deep: #2a1f19;       /* リッチで重厚なディープゴールドブラウン（旧ネイビー） */
-            --gold-champagne: #c5a059; /* 上品に輝くシャンパンゴールド（旧マットゴールド） */
-            --premium-beige: #fcfaf6;  /* 明るく柔らかな最高級ベージュ（旧オフホワイト） */
-            --text-main: #2c221e;      /* 知性を感じる深みのエスプレッソブラウン（旧黒） */
+            --bg-deep: #2a1f19;       /* リッチで重厚なディープゴールドブラウン */
+            --gold-champagne: #c5a059; /* 上品に輝くシャンパンゴールド */
+            --premium-beige: #fcfaf6;  /* 明るく柔らかな最高級ベージュ */
+            --text-main: #2c221e;      /* 知性を感じる深みのエスプレッソブラウン */
             --text-sub: #5a4f4a;       /* 読みやすいミディアムブラウン */
             --bg-light-box: #f5f0e6;   /* セクションのメリハリをつけるライトベージュ */
             --btn-accent: #0b6646;     /* ゴールドに映える洗練されたクラシックエメラルド */
@@ -98,15 +98,16 @@
             background: rgba(255, 255, 255, 0.04); 
             display: flex;
             flex-direction: column;
-            overflow: hidden; /* 枠からはみ出た画像を強制的にカットします */
+            overflow: hidden;
         }
-        /* 画像が枠に綺麗に収まるように調整した箇所 */
         .card img { 
             width: 100%; 
-            height: 240px;          /* 高さを固定して3枚の画像サイズを統一 */
-            object-fit: cover;      /* どんな比率の画像でも枠に合わせて自動で中央を切り抜く */
-            object-position: center; /* 切り抜きの基準位置を真ん中に設定 */
-            opacity: 0.9; 
+            height: 280px;          /* 実際の指輪の細部が見えやすいよう、少し高さを広げました */
+            object-fit: contain;    
+            object-position: center; 
+            background-color: #fdfbfa; 
+            box-sizing: border-box;
+            padding: 15px;          /* 余白を少し広げて、よりジュエリーが引き立つ上品なフレーミングに */
         }
         .card-body { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
         .card-body h3 { color: var(--gold-champagne); font-size: 1.25rem; margin-bottom: 15px; min-height: 3em; display: flex; align-items: center; }
@@ -124,7 +125,8 @@
         .step-item h4 { font-size: 1.05rem; color: var(--text-main); margin-bottom: 15px; min-height: 2.5em; display: flex; align-items: center; justify-content: center; }
         .step-item h4 span { display: inline-block; white-space: nowrap; }
         .step-item p { flex-grow: 1; margin-bottom: 20px; font-size: 0.85rem; text-align: left; min-height: 5.4em; color: var(--text-sub); }
-        .payment-label { background: #fffbf2; font-size: 0.8rem; padding: 10px; border-left: 3px solid var(--gold-champagne); text-align: left; margin-top: auto; min-height: 3.2em; display: flex; flex-direction: column; justify-content: center; color: var(--text-main); }
+        .payment-label { background: #fffbf2; font-size: 0.8rem; padding: 10px; border-left: 3px solid var(--gold-champagne); text-align: left; margin-top: auto; min-height: 5.2em; display: flex; flex-direction: column; justify-content: center; color: var(--text-main); line-height: 1.5; }
+        .payment-note { font-size: 0.7rem; opacity: 0.8; margin-top: 4px; font-weight: normal; }
 
         /* FAQ */
         .faq-section { background-color: var(--bg-light-box); padding: 60px 0; border-radius: 4px; margin-top: 40px; }
@@ -184,7 +186,7 @@
         <div class="container">
             <p>nocturnal armor | Premium Line</p>
             <h1>10年後も、この輝きを<br class="sp-only">愛せる。<br>
-            そんな確信を持てる<br class="sp-only">一点を。</h1>
+            そんな確信を持せる<br class="sp-only">一点を。</h1>
             <p>本物が似合う自分でありたい。<br>
 その想いに、嘘をつかない。</p>
         </div>
@@ -205,24 +207,24 @@
             <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 60px;">MATERIAL STRATEGY</h2>
             <div class="grid">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1561828995-aa79a2db86dd?q=80&w=600&auto=format&fit=crop" alt="K18">
+                    <img src="item1.png" alt="ペリドットと淡水パールのフラワーリング">
                     <div class="card-body">
-                        <h3>普遍的価値：K18・Pt</h3>
-                        <p>一生色褪せない資産価値としてのゴールドとプラチナ。流行に左右されず、あなたの日常と格を物理的に支え続けます。</p>
+                        <h3>普遍的価値：地金と天然石の格</h3>
+                        <p>一生色褪せない地金の価値に、みずみずしい天然石としなやかな淡水パールをアセンブル。流行に左右されず、あなたの日常と経営者としての格を物理的に支え続けます。</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1600721391776-b5cd0e0048f9?q=80&w=600&auto=format&fit=crop" alt="Eye">
+                    <img src="item2.png" alt="シトリンのオーバルクラスターリング">
                     <div class="card-body">
-                        <h3>独自の物語：目利き</h3>
-                        <p>ヴィンテージパーツや宝石を、独自の審美眼で構築（アセンブル）。素材の組み合わせに最大の価値を置く、一点物の贅沢です。</p>
+                        <h3>独自の物語：審美眼によるアセンブル</h3>
+                        <p>中央の石の美しさを最大化させるため、周囲のパーツを独自の審美眼で精密に再構築。素材の組み合わせとバランスに最大の価値を置く、一点物の贅沢です。</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop" alt="Sanmei">
+                    <img src="item3.png" alt="ブルージルコンのサンバーストリング">
                     <div class="card-body">
-                        <h3>ラッキーカラーや素材の選定</h3>
-                        <p>算命学（帝王学）の観点から、あなたを輝かせる色と素材をご提案.身に着けることが、自己肯定の儀式となります。</p>
+                        <h3>宿命を宿す知性：カラー＆素材選定</h3>
+                        <p>算命学（帝王学）の観点から、あなたの宿命を引き上げる守護神カラーやラッキー素材をご提案。自分だけの「確信」を指先に纏う、自己肯定の儀式となります。</p>
                     </div>
                 </div>
             </div>
@@ -252,8 +254,8 @@
                 <h4><span>【個別相談】</span><span>まずはZoomで。</span></h4>
                 <p>無料相談から。あなたの想いやご予算、算命学による簡易カラー診断を行い、制作の方向性を決めてしていきます。</p>
                 <div class="payment-label">
-                    【相談料：無料】<br>
-                    オンラインで全国対応。
+                    <strong>【相談料：無料】</strong>
+                    <span class="payment-note">オンラインで全国対応。</span>
                 </div>
             </div>
             <div class="step-item">
@@ -261,8 +263,8 @@
                 <h4><span>【素材選定】</span><span>質感に触れる。</span></h4>
                 <p>都内ラウンジにて（zoom対応可）。素材サンプルや対話を通じて「あなたを支える一点」を具体的に構築します。</p>
                 <div class="payment-label">
-                    【直接対面：5,500円】（Zoom無料）<br>
-                    ※オーダー成約時に充当。
+                    <strong>【直接対面：5,500円】</strong>
+                    <span class="payment-note">（Zoomは無料）<br>※オーダー成約時に充当。</span>
                 </div>
             </div>
             <div class="step-item">
@@ -270,8 +272,8 @@
                 <h4><span>【製作開始】</span><span>新月から形に。</span></h4>
                 <p>ご提案に納得いただけた場合のみ確定。新月の日に合わせ、厳選した素材の仕入れと丁寧な製作を開始します。</p>
                 <div class="payment-label">
-                    【内金決済】<br>
-                    地金・素材代相当を承ります。
+                    <strong>【内金決済】</strong>
+                    <span class="payment-note">銀行振込・各種カード対応<br>※分割払いは個別相談可</span>
                 </div>
             </div>
             <div class="step-item">
@@ -279,8 +281,8 @@
                 <h4><span>【完成納品】</span><span>満月の輝きを。</span></h4>
                 <p>満月の日に仕上げ、あなたの吉日に発送。手にした瞬間、自分への誇りを取り戻す体験を真っ直ぐ届けます。</p>
                 <div class="payment-label">
-                    【残金決済】<br>
-                    お支払い確認後に発送します。
+                    <strong>【残金決済】</strong>
+                    <span class="payment-note">銀行振込・各種カード対応<br>お支払い確認後に発送します。</span>
                 </div>
             </div>
         </div>
